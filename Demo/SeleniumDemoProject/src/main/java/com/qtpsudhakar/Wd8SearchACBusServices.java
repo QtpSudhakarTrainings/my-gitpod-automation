@@ -79,7 +79,10 @@ public class Wd8SearchACBusServices {
 
         List<WebElement> lstFliterACServices = lstACServices.stream().filter(elm->elm.isDisplayed()).collect(Collectors.toList());
 
-        if (lstFliterACServices.size()==Integer.parseInt(acSrvCount)){            
+
+        List<WebElement> acServices = driver.findElements(By.xpath("//div[@class='srvceNO' and not(ancestor::div[@style='display: none;'])]"));
+
+        if (acServices.size()==Integer.parseInt(acSrvCount)){            
             System.out.println("Correct number of AC services displayed");
         }else{
             System.out.println("Wrong number of AC services displayed");
