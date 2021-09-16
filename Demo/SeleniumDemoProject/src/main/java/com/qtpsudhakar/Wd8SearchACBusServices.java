@@ -72,8 +72,6 @@ public class Wd8SearchACBusServices {
                 acCounter++;
             }
         }
-
-
         // lstACServices.forEach(elm->{            
         //     if (elm.isDisplayed()){
                 
